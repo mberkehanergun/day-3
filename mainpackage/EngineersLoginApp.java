@@ -23,7 +23,7 @@ public class EngineersLoginApp {
 			AbstractApplicationContext ctx2 = new ClassPathXmlApplicationContext("namedparamjdbcdaoimpl.xml");
 			NamedParamJdbcDaoImpl dao = ctx2.getBean("namedParamJdbcDaoImpl", NamedParamJdbcDaoImpl.class);
 			dao.printInternTable();
-			String[] nameandsurnamesToRemove = {"internNameAndSurname2", "internNameAndSurname4"};
+			String[] nameandsurnamesToRemove = {"internNandS2", "internNandS4"};
 			dao.removeSelectedRows(nameandsurnamesToRemove);
 			dao.printInternTable();
 			ctx2.close();
