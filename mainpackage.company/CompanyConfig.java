@@ -19,6 +19,7 @@ public class CompanyConfig {
     @Autowired
     public CompanyConfig(DataSource dataSource) {
         this.dataSource = dataSource;
+        this.initializeIANUMFromDatabase();
     }
 
     public int getIANUM() {
