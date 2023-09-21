@@ -3,7 +3,6 @@ package mainpackage.company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -45,7 +44,6 @@ public class CompanyConfig {
         }
     }
 
-    @PostConstruct
     public void initializeIANUMFromDatabase() {
         try (Connection connection = dataSource.getConnection()) {
             String selectQuery = "SELECT IANUM FROM COMPANYCONFIG";
